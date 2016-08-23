@@ -10,7 +10,7 @@
     "node-fetch": "^1.6.0",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
-    "react-tap-event-plugin": "^1.0.0",
+    "react-tap-event-plugin": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
