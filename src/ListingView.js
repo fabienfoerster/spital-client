@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
-import fetch from 'node-fetch';
+import $ from 'jquery';
 
 class ListingView extends Component {
   constructor(props) {
@@ -9,13 +9,17 @@ class ListingView extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:5000/api/v1/boxes')
-      .then(res => res.json())
-      .then(res => {
-        this.setState({
-          data: res
-        })
-      })
+    $.ajax({
+      url: 'http://spital-server:5000/api/v1/boxes',
+      dataType: 'json',
+      cache: false,
+      success: (data) => {
+        this.setState({data:data});
+      },
+      error: function(xhr, status, err){
+        console.error("http://spital-server:5000/api/v1/boxes",status,err.toString());
+      }
+    });
   }
 
   render() {
