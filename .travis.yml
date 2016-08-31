@@ -9,7 +9,6 @@ services:
 script:
   - npm install
   - npm run build
-  - ./build.sh
   - docker build -t fabienfoerster/spital-client .
 
 after_success:
