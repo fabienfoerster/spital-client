@@ -8,7 +8,7 @@ class MenuPrincipal extends Component {
     return(
       <List>
           <Link to="/listing"> <ListItem primaryText="Listing" /></Link>
-          <ListItem primaryText="Instruments"/>
+          <Link to="/instruments"> <ListItem primaryText="Instruments"/></Link>
       </List>
     );
   }
