@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import ListingView from './ListingView';
+import MenuPrincipal from './MenuPrincipal';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+import { Router, Route, hashHistory } from 'react-router'
 
 
 
@@ -11,7 +15,12 @@ class App extends Component {
         <div className="App-header">
           <h2>Saint Joseph Hospital</h2>
         </div>
-          <ListingView />
+        <MuiThemeProvider>
+          <Router history={hashHistory}>
+            <Route path="/" component={MenuPrincipal}/>
+            <Route path="/listing" component={ListingView}/>
+          </Router>
+          </MuiThemeProvider>
       </div>
     );
   }
