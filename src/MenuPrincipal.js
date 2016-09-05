@@ -9,6 +9,8 @@ class MenuPrincipal extends Component {
       <List>
           <Link to="/listing"> <ListItem primaryText="Listing" /></Link>
           <Link to="/instruments"> <ListItem primaryText="Instruments"/></Link>
+          <Link to="/fls/create"> <ListItem primaryText="Créer fiche de liaison"/></Link>
+          <Link to="/fls"><ListItem primaryText="Voir fiches liaison"/></Link>
       </List>
     );
   }
